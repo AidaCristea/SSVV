@@ -102,16 +102,6 @@ public class StudentValidatorTest extends TestCase {
     public void testNullId() {
         Student nullIdStudent = new Student(null, "John Doe", 123, "a@gmail.com");
         assertThrows(NullPointerException.class, () -> this.service.addStudent(nullIdStudent));
-        /*
-        // Act & Assert
-        try {
-            new StudentValidator().validate(nullIdStudent);
-            // Fail the test if no exception is thrown for an invalid email
-            assert false : "Expected ValidationException for null Id";
-        } catch (ValidationException e) {
-            // Pass the test if a ValidationException is thrown
-            assert true;
-        }*/
     }
 
     @Test
