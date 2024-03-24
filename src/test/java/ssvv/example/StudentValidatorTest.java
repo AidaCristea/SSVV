@@ -1,6 +1,7 @@
 package ssvv.example;
 
 import domain.Student;
+import junit.framework.TestCase;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import repository.NotaXMLRepo;
@@ -14,7 +15,7 @@ import validation.ValidationException;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class StudentValidatorTest {
+public class StudentValidatorTest extends TestCase {
     private Service service;
 
     @BeforeEach
