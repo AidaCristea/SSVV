@@ -55,6 +55,72 @@ public class TemeValidatorTest extends TestCase {
         }
     }
 
+    @Test
+    public void testEmptyDescriere()
+    {
+        Tema tema = new Tema("1", "", 2, 4);
+
+        try {
+            new TemaValidator().validate(tema);
+            assert false : "Expected ValidationException for empty description";
+        } catch (ValidationException e) {
+            assert true;
+        }
+    }
+
+    @Test
+    public void testDeadlineSmallerThanOne()
+    {
+        Tema tema = new Tema("1", "dd", 0, 6);
+
+        try {
+            new TemaValidator().validate(tema);
+            assert false : "Expected ValidationException for deadline smaller than 1";
+        } catch (ValidationException e) {
+            assert true;
+        }
+    }
+
+    @Test
+    public void testDeadlineGreaterThan14()
+    {
+        Tema tema = new Tema("1", "dd", 15, 5);
+
+        try {
+            new TemaValidator().validate(tema);
+            assert false : "Expected ValidationException for deadline greater than 14";
+        } catch (ValidationException e) {
+            assert true;
+        }
+    }
+
+    @Test
+    public void testPrimireSmallerThanOne()
+    {
+        Tema tema = new Tema("1", "dd", 2, -1);
+
+        try {
+            new TemaValidator().validate(tema);
+            assert false : "Expected ValidationException for primire smaller than 1";
+        } catch (ValidationException e) {
+            assert true;
+        }
+    }
+
+    @Test
+    public void testPrimireGreaterThan14()
+    {
+        Tema tema = new Tema("1", "dd", 2, 15);
+
+        try {
+            new TemaValidator().validate(tema);
+            assert false : "Expected ValidationException for primire greater than 14";
+        } catch (ValidationException e) {
+            assert true;
+        }
+    }
+
+
 
 
 }
