@@ -76,13 +76,13 @@ public class IntegrationTestingTest extends TestCase {
         service = new Service(studentXMLRepository, studentValidator, temaXMLRepository, temaValidator, notaXMLRepository, notaValidator);
     }
 
-    @AfterAll
+    /*@AfterAll
     public static void teardown() {
 
         new File("fisiere/studentiTest.xml").delete();
         new File("fisiere/temeTest.xml").delete();
         new File("fisiere/noteTest.xml").delete();
-    }
+    }*/
 
     @Test
     public void testAddStudent() {
