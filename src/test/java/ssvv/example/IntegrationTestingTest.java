@@ -73,7 +73,7 @@ public class IntegrationTestingTest extends TestCase {
         TemaXMLRepo temaXMLRepository = new TemaXMLRepo("fisiere/temeTest.xml");
         NotaValidator notaValidator = new NotaValidator(studentXMLRepository, temaXMLRepository);
         NotaXMLRepo notaXMLRepository = new NotaXMLRepo("fisiere/noteTest.xml");
-        service = new Service(studentXMLRepository, studentValidator, temaXMLRepository, temaValidator, notaXMLRepository, notaValidator);
+        this.service = new Service(studentXMLRepository, studentValidator, temaXMLRepository, temaValidator, notaXMLRepository, notaValidator);
     }
 
     /*@AfterAll
