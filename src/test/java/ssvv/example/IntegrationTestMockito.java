@@ -4,6 +4,7 @@ package ssvv.example;
 import domain.Nota;
 import domain.Student;
 import domain.Tema;
+import junit.framework.TestCase;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -22,7 +23,7 @@ import java.time.LocalDate;
 import static org.mockito.Mockito.*;
 
 
-public class IntegrationTestMockito {
+public class IntegrationTestMockito extends TestCase {
 
     @Mock
     private StudentValidator studentValidator;
