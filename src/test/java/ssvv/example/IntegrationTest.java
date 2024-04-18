@@ -66,7 +66,7 @@ public class IntegrationTest extends TestCase {
 
     @BeforeEach
     public void setup() {
-        StudentValidator studentValidator = new StudentValidator();
+        /*StudentValidator studentValidator = new StudentValidator();
         TemaValidator temaValidator = new TemaValidator();
 
         StudentXMLRepo studentXMLRepository = new StudentXMLRepo("fisiere/studentiTest.xml");
@@ -74,6 +74,21 @@ public class IntegrationTest extends TestCase {
         NotaValidator notaValidator = new NotaValidator(studentXMLRepository, temaXMLRepository);
         NotaXMLRepo notaXMLRepository = new NotaXMLRepo("fisiere/noteTest.xml");
         this.service = new Service(studentXMLRepository, studentValidator, temaXMLRepository, temaValidator, notaXMLRepository, notaValidator);
+*/
+
+        StudentValidator studentValidator = new StudentValidator();
+        TemaValidator temaValidator = new TemaValidator();
+        String fileStudent = "fisiere/studentiTest.xml";
+        String fileTema = "fisiere/temeTest.xml";
+        String fileNota = "fisiere/noteTest.xml";
+
+        StudentXMLRepo studentXMLRepo = new StudentXMLRepo(fileStudent);
+        TemaXMLRepo temaXMLRepo = new TemaXMLRepo(fileTema);
+        NotaXMLRepo notaXMLRepo = new NotaXMLRepo(fileNota);
+        NotaValidator notaValidator = new NotaValidator(studentXMLRepo, temaXMLRepo);
+
+        this.service = new Service(studentXMLRepo, studentValidator, temaXMLRepo, temaValidator, notaXMLRepo, notaValidator);
+
     }
 
     @AfterAll
