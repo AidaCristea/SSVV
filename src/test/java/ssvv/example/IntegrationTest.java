@@ -22,7 +22,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDate;
 
-public class IntegrationTestingTest extends TestCase {
+public class IntegrationTest extends TestCase {
     private Service service;
 
     @BeforeAll
@@ -76,13 +76,13 @@ public class IntegrationTestingTest extends TestCase {
         this.service = new Service(studentXMLRepository, studentValidator, temaXMLRepository, temaValidator, notaXMLRepository, notaValidator);
     }
 
-    /*@AfterAll
+    @AfterAll
     public static void teardown() {
 
         new File("fisiere/studentiTest.xml").delete();
         new File("fisiere/temeTest.xml").delete();
         new File("fisiere/noteTest.xml").delete();
-    }*/
+    }
 
     @Test
     public void testAddStudent() {
