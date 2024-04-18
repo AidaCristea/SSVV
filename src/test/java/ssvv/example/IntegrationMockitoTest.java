@@ -23,7 +23,7 @@ import java.time.LocalDate;
 import static org.mockito.Mockito.*;
 
 
-public class IntegrationTestMockito extends TestCase {
+public class IntegrationMockitoTest extends TestCase {
 
     @Mock
     private StudentValidator studentValidator;
