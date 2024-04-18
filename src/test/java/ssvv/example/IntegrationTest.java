@@ -108,7 +108,7 @@ public class IntegrationTest extends TestCase {
     }
 
     @Test
-    public void testIntergation()
+    public void testIntegration()
     {
         Student student = new Student("335", "Ana", 931, "ana@gmail.com");
         Tema tema = new Tema("335", "a", 1, 1);
