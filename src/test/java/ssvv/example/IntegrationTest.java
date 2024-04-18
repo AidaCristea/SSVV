@@ -22,10 +22,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDate;
 
-import static junit.framework.Assert.assertEquals;
-import static junit.framework.Assert.assertNull;
-
-public class IntegrationTest{
+public class IntegrationTest extends TestCase {
     private Service service;
 
     @BeforeAll

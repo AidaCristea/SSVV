@@ -172,3 +172,15 @@ Nota: 10.0
 Predata in saptamana: 0
 Deadline: 1
 Feedback: bine
+
+Tema: 334
+Nota: 10.0
+Predata in saptamana: 0
+Deadline: 1
+Feedback: bine
+
+Tema: 335
+Nota: 10.0
+Predata in saptamana: 0
+Deadline: 1
+Feedback: bine
